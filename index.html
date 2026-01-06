@@ -12,33 +12,15 @@
     <div class="moon-container">
         <div class="moon"></div>
     </div>
-    
+
     <header class="header">
         <nav class="nav">
             <div class="logo">smileworld</div>
             <div class="nav-center">
                 <ul class="nav-links">
-                    <li><a href="#home" data-translate="nav-home">Главная</a></li>
-                    <li><a href="#shop" data-translate="nav-shop">Магазин</a></li>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#shop">Магазин</a></li>
                 </ul>
-            </div>
-            <div class="language-switcher">
-                <button class="lang-btn" onclick="changeLanguage('en')">
-                    <span class="flag">🇺🇸</span>
-                    <span class="country-name">English</span>
-                </button>
-                <button class="lang-btn" onclick="changeLanguage('ru')">
-                    <span class="flag">🇷🇺</span>
-                    <span class="country-name">Русский</span>
-                </button>
-                <button class="lang-btn" onclick="changeLanguage('zh')">
-                    <span class="flag">🇨🇳</span>
-                    <span class="country-name">中文</span>
-                </button>
-                <button class="lang-btn" onclick="changeLanguage('uk')">
-                    <span class="flag">🇺🇦</span>
-                    <span class="country-name">Українська</span>
-                </button>
             </div>
         </nav>
     </header>
@@ -46,55 +28,135 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title" data-translate="hero-title">smileworld</h1>
-                <p class="hero-subtitle" data-translate="hero-subtitle">Где начинается игра и хорошее настроение</p>
+                <h1 class="hero-title">smileworld</h1>
+                <p class="hero-subtitle">Лучший Minecraft сервер для комфортной игры</p>
                 <div class="hero-description">
-                    <p data-translate="hero-description">
-                        smileworld — это место для комфортной игры, общения и весёлых моментов.
-                        Мы создаём сервер, куда хочется возвращаться снова и снова.
+                    <p>
+                        smileworld — это сервер с честной игрой, дружелюбным сообществом
+                        и стабильной работой 24/7. Заходи и играй с удовольствием.
                     </p>
                 </div>
-                <button class="cta-button" onclick="scrollToSection('shop')" data-translate="hero-cta">Перейти в магазин</button>
+                <button class="cta-button" onclick="scrollToSection('shop')">Перейти в магазин</button>
             </div>
         </section>
 
         <section id="shop" class="shop">
             <div class="container">
-                <h2 class="section-title" data-translate="shop-title">Донат на сервере smileworld</h2>
-                
+                <h2 class="section-title">Донат на сервере smileworld</h2>
+
                 <div class="server-info">
                     <div class="server-details">
-                        <h3 data-translate="server-info">Информация о сервере</h3>
-                        <p><strong data-translate="server-ip">IP Адрес:</strong> <span class="server-ip">f1.rustix.me:28302</span> <button class="copy-ip-btn" onclick="copyIP()" title="Скопировать IP">📋</button></p>
-                        <p><strong data-translate="server-status">Статус:</strong> <span class="server-status online">Online</span></p>
-                        <p><strong data-translate="server-version">Версия:</strong> Minecraft 1.16.5</p>
+                        <h3>Информация о сервере</h3>
+                        <p><strong>IP Адрес:</strong> <span class="server-ip">f1.rustix.me:28302</span></p>
+                        <p><strong>Статус:</strong> <span class="server-status online">Online</span></p>
+                        <p><strong>Версия:</strong> Minecraft 1.16.5</p>
+                    </div>
+                </div>
+
+                <!-- DONATION TIERS -->
+                <div class="donation-tiers">
+                    <h3>Цены на донат:</h3>
+                    <div class="tier-grid">
+
+                        <div class="tier-card">
+                            <span class="tier-name">HERO</span>
+                            <span class="tier-price">9₽</span>
+                            <button onclick="purchaseDonation('HERO',9)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">TITAN</span>
+                            <span class="tier-price">19₽</span>
+                            <button onclick="purchaseDonation('TITAN',19)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">AVENGER</span>
+                            <span class="tier-price">25₽</span>
+                            <button onclick="purchaseDonation('AVENGER',25)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">OVERLORD</span>
+                            <span class="tier-price">29₽</span>
+                            <button onclick="purchaseDonation('OVERLORD',29)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">MAGISTER</span>
+                            <span class="tier-price">39₽</span>
+                            <button onclick="purchaseDonation('MAGISTER',39)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">IMPERATOR</span>
+                            <span class="tier-price">49₽</span>
+                            <button onclick="purchaseDonation('IMPERATOR',49)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">DRAGON</span>
+                            <span class="tier-price">89₽</span>
+                            <button onclick="purchaseDonation('DRAGON',89)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">COBRA</span>
+                            <span class="tier-price">349₽</span>
+                            <button onclick="purchaseDonation('COBRA',349)">Купить</button>
+                        </div>
+
+                        <div class="tier-card">
+                            <span class="tier-name">GOD</span>
+                            <span class="tier-price">790₽</span>
+                            <button onclick="purchaseDonation('GOD',790)">Купить</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SPECIAL OFFERS -->
+                <div class="special-offers">
+                    <h3>Специальные предложения</h3>
+                    <div class="offer-grid">
+                        <div class="offer-card">
+                            <span>Кейс x3</span>
+                            <span>179₽</span>
+                            <button onclick="purchaseDonation('CASE3',179)">Купить</button>
+                        </div>
+                        <div class="offer-card">
+                            <span>Кейс x5</span>
+                            <span>279₽</span>
+                            <button onclick="purchaseDonation('CASE5',279)">Купить</button>
+                        </div>
+                        <div class="offer-card">
+                            <span>Кейс x1</span>
+                            <span>479₽</span>
+                            <button onclick="purchaseDonation('CASE1',479)">Купить</button>
+                        </div>
                     </div>
                 </div>
 
                 <div class="purchase-info">
-                    <p><strong data-translate="purchase-info">Покупка на сайте:</strong> <span class="site-name">smileworld</span></p>
-                    <p class="disclaimer" data-translate="disclaimer">
-                        * Все покупки обрабатываются автоматически. При возникновении проблем свяжитесь с администрацией.
-                    </p>
+                    <p><strong>Покупка на сайте:</strong> smileworld</p>
+                    <p>* Все покупки обрабатываются автоматически</p>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p data-translate="footer-copyright">
-                © 2024 smileworld. Игра с улыбкой.
-            </p>
-            <div class="footer-links">
-                <a href="#" data-translate="footer-privacy">Конфиденциальность</a>
-                <a href="#" data-translate="footer-support">Поддержка</a>
-                <a href="#" data-translate="footer-contact">Контакты</a>
-            </div>
-        </div>
+        <p>© 2024 smileworld. Все права защищены.</p>
     </footer>
 
-    <script src="translations.js"></script>
-    <script src="script.js"></script>
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+        function purchaseDonation(name, price) {
+            alert(`Покупка: ${name} за ${price}₽`);
+        }
+    </script>
 </body>
 </html>
